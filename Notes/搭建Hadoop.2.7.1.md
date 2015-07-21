@@ -25,7 +25,7 @@
 
 - 安装OracleJDK8
 
-  ```
+  ```Shell
   sudo add-apt-repository ppa:webupd8team/java
   sudo apt-get update
   sudo apt-get install oracle-java8-installer
@@ -201,7 +201,7 @@ Bind是一款开放源码的DNS服务器软件，用于映射节点的IP与域�
 
   1. hadoop-2.7.1/etc/hadoop/core-site.xml
 
-    ```
+    ```XML
     <configuration>
         <property>
             <name>hadoop.tmp.dir</name>
@@ -217,7 +217,7 @@ Bind是一款开放源码的DNS服务器软件，用于映射节点的IP与域�
   
   1. hadoop-2.7.1/etc/hadoop/hdfs-site.xml
 
-    ```
+    ```XML
     <configuration>
         <property>
             <name>dfs.name.dir</name>
@@ -233,7 +233,7 @@ Bind是一款开放源码的DNS服务器软件，用于映射节点的IP与域�
 
   1. hadoop-2.7.1/etc/hadoop/mapred-site.xml
   
-    ```
+    ```XML
     <configuration>
         <property>
             <name>mapred.job.tracker</name>
@@ -251,7 +251,7 @@ Bind是一款开放源码的DNS服务器软件，用于映射节点的IP与域�
 
 - 向各节点复制hadoop
 
-  ```
+  ```Shell
   cat ~/hadoop-2.7.1/etc/hadoop/slaves| awk '{print "scp -rp hadoop-2.7.1 hadoop@"$1":/home/hadoop"}' > scp.sh
   chmod u+x scp.sh
   cat scp.sh
@@ -262,14 +262,14 @@ Bind是一款开放源码的DNS服务器软件，用于映射节点的IP与域�
 
   1. 格式化namenode
 
-    ```
+    ```Shell
     hadoop@master:~$ cd /home/hadoop/hadoop-2.2.0/bin/ 
     hadoop@master:~/hadoop-2.7.1/bin$ ./hdfs namenode -format 
     ```
 
   1. 启动hdfs
 
-    ```
+    ```Shell
     hadoop@master:~/hadoop-2.7.1/bin$ cd ../sbin/
     hadoop@master:~/hadoop-2.7.1/sbin$ ./start-dfs.sh 
     ```
@@ -277,7 +277,7 @@ Bind是一款开放源码的DNS服务器软件，用于映射节点的IP与域�
   1. 设置环境变量
 
     `sudo nano /etc/profile`
-    ```
+    ```Shell
     export HADOOP_HOME=/home/hadoop/hadoop-2.7.1
     export PATH=$HADOOP_HOME/bin:$PATH
     ```
