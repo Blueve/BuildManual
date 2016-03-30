@@ -1,6 +1,4 @@
-﻿# 使用Repox搭建快速SBT服务器
----
-
+# 使用Repox搭建快速SBT服务器
 ## 目的
 由于国内连接SBT速度十分不稳定，因此本文将使用[Repox](https://github.com/Centaur/repox)来搭建一个自己的SBT服务器，试图解决SBT的连接问题。
 
@@ -12,7 +10,6 @@
     + Scala 2.10.6
     + JDK 1.8.0_77(由于Repox的原因，JDK7是无法使用的)
 
----
 ## 准备
 ### 更新 apt
 `sudo apt-get update`
@@ -26,7 +23,7 @@
 ### 安装 SBT
 由于Repox的原因，需要先使用SBT构建项目，因此需要先安装[SBT](http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Linux.html)
 
-```Shell
+```bash
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
 sudo apt-get update
@@ -59,8 +56,8 @@ sudo nano /etc/profile
 ### 安装 bower
 `sudo npm install bower -g`
 
----
 ## Repox
+
 ### Repox 服务器
 从源码编译打包
 ```
