@@ -69,6 +69,11 @@ sbt -Pyarn -Phadoop-2.6 -DskipTests assembly
 2. 将所有的`scope="PROVIDED"`删除
 3. Run
 
+##### SBT Project运行Example项目时出现异常
+
+1. View -> Tool Windows -> SBT
+2. Refrash All SBT Projects
+
 
 ## Ubuntu 14.04 LTS
 
