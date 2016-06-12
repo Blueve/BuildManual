@@ -79,7 +79,7 @@ Case 1: SBT模块载入不完全
 Case 2: jetty模块冲突
 
 1. File -> Project Structure -> Libraries
-2. Delete所有`orj.morbay.jetty`开头的jar包
+2. Delete所有`org.morbay.jetty`开头的jar包
 
 ## Ubuntu 14.04 LTS
 
