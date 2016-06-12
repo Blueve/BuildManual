@@ -71,9 +71,15 @@ sbt -Pyarn -Phadoop-2.6 -DskipTests assembly
 
 ##### SBT Project运行Example项目时出现异常
 
+Case 1: SBT模块载入不完全
+
 1. View -> Tool Windows -> SBT
 2. Refrash All SBT Projects
 
+Case 2: jetty模块冲突
+
+1. File -> Project Structure -> Libraries
+2. Delete所有`orj.morbay.jetty`开头的jar包
 
 ## Ubuntu 14.04 LTS
 
