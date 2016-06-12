@@ -59,7 +59,7 @@ sbt -Pyarn -Phadoop-2.6 -DskipTests assembly
 
 1. File -> Project Structure -> Modules
 2. spark-streaming-flume-sink_*.**
-3. 将target, scala-2.10/src_managed/.../flume/sink Mark as Sources
+3. 将target/scala-2.10/src_managed/.../flume/sink Mark as Sources
 4. 将target/generated-sources, target/java, target/resolution-cache, target/scala-2.10/cache, target/streams Mark as Excluded
 5. Ok, Build -> Rebuild Project
 
